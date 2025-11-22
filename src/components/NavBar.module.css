@@ -1,0 +1,20 @@
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.logo {
+  margin: 0 64px;
+}
+
+@media (max-width: 768px) {
+  .navContainer {
+    margin-top: 20px;
+  }
+
+  .logo {
+    margin: 0 20px;
+  }
+}
