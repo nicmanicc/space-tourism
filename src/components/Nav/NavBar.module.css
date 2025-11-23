@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 40px;
+  height: 100px;
 }
 
 .logo {
@@ -11,7 +12,7 @@
 
 @media (max-width: 768px) {
   .navContainer {
-    margin-top: 20px;
+    padding-top: 20px;
   }
 
   .logo {
