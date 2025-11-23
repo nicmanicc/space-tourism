@@ -1,6 +1,8 @@
 import classes from './Home.module.css';
+import { useNavigation } from '../../context/NavigationContext';
 
 export const Home = () => {
+  const { setActiveTab } = useNavigation();
   return (
     <div className={classes.homeContainer}>
       <div className={classes.description}>
@@ -15,7 +17,10 @@ export const Home = () => {
           experience!
         </p>
       </div>
-      <button className={`font-bellefair-preset-4 ${classes.exploreBtn}`}>
+      <button
+        onClick={() => setActiveTab('01')}
+        className={`font-bellefair-preset-4 ${classes.exploreBtn}`}
+      >
         EXPLORE
       </button>
     </div>

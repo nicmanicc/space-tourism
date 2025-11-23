@@ -40,3 +40,35 @@
     transform: rotate(360deg);
   }
 }
+
+.page-content.slide-right {
+  animation: slideInRight 0.5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+.page-content.slide-left {
+  animation: slideInLeft 0.5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

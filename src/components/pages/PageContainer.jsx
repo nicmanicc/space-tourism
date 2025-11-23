@@ -1,3 +1,3 @@
-export const PageContainer = ({ children }) => {
-  return <div className="PageContainer">{children}</div>;
+export const PageContainer = ({ children, otherStyles }) => {
+  return <div className={`${otherStyles} PageContainer`}>{children}</div>;
 };
