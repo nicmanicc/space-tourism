@@ -9,6 +9,8 @@
   cursor: pointer;
   background: none;
   border: none;
+  position: relative;
+  z-index: 2;
 }
 
 .hamburgerLine {
@@ -35,11 +37,11 @@
 }
 
 .menu.open {
-  z-index: -1;
   display: flex;
+  z-index: 1;
   flex-direction: column;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   justify-content: flex-start;
   align-items: baseline;
   right: 0;

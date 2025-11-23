@@ -13,6 +13,10 @@ body {
   min-height: 100vh;
 }
 
+html {
+  font-size: 16px;
+}
+
 @media (min-width: 768px) {
   body {
     background-image: url('./assets/home/background-home-tablet.jpg');
@@ -28,72 +32,72 @@ body {
 .font-bellefair-preset-1 {
   font-family: 'Bellefair', serif;
   line-height: 172%;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   font-style: normal;
-  font-size: 144px;
+  font-size: 9rem; /* 144px ÷ 16 = 9rem */
 }
 
 .font-bellefair-preset-2 {
   font-family: 'Bellefair', serif;
   line-height: 115%;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   font-style: normal;
-  font-size: 100px;
+  font-size: 6.25rem; /* 100px ÷ 16 = 6.25rem */
 }
 
 .font-bellefair-preset-3 {
   font-family: 'Bellefair', serif;
   line-height: 65%;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   font-style: normal;
-  font-size: 56px;
+  font-size: 3.5rem; /* 56px ÷ 16 = 3.5rem */
 }
 
 .font-bellefair-preset-4 {
   font-family: 'Bellefair', serif;
   line-height: 36%;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   font-style: normal;
-  font-size: 32px;
+  font-size: 2rem; /* 32px ÷ 16 = 2rem */
 }
 
 .font-barlow-preset-5 {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 28px;
+  font-size: 1.75rem; /* 28px ÷ 16 = 1.75rem */
   line-height: 34%;
-  letter-spacing: 4px;
+  letter-spacing: 0.25rem; /* 4px ÷ 16 = 0.25rem */
   font-weight: 100;
 }
 
 .font-bellefair-preset-6 {
   font-family: 'Bellefair', serif;
   line-height: 32%;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   font-style: normal;
-  font-size: 28px;
+  font-size: 1.75rem; /* 28px ÷ 16 = 1.75rem */
 }
 
 .font-barlow-preset-7 {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem; /* 14px ÷ 16 = 0.875rem */
   line-height: 17%;
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem; /* 2px ÷ 16 = 0.125rem */
   font-weight: 100;
 }
 
 .font-barlow-preset-8 {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px ÷ 16 = 1.125rem */
   line-height: 180%;
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem; /* 2px ÷ 16 = 0.125rem */
   font-weight: 100;
 }
 
 .font-barlow-preset-9 {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px ÷ 16 = 1.125rem */
   line-height: 180%;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   font-weight: 100;
 }
 
