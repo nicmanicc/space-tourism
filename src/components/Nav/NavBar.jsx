@@ -1,4 +1,4 @@
-import logo from '../assets/shared/logo.svg';
+import logo from '../../assets/shared/logo.svg';
 import { HamburgerMenu } from './HamburgerMenu';
 import { LinkContainer } from './LinkContainer';
 import classes from './NavBar.module.css';
