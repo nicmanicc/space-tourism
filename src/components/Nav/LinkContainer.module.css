@@ -40,6 +40,7 @@
 
 .active {
   border-bottom: 3px solid #ffffff !important;
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
