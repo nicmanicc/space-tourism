@@ -28,6 +28,20 @@
   z-index: 2;
 }
 
+.linkContainer button {
+  background: none;
+  border: none;
+  color: white;
+}
+
+.linkContainer button:hover {
+  border-bottom: 3px solid #ffffff50;
+}
+
+.active {
+  border-bottom: 3px solid #ffffff !important;
+}
+
 @media (max-width: 768px) {
   .linkContainer {
     display: none;
