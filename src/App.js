@@ -20,6 +20,21 @@ function App() {
     prevTab.current = activeTab;
   }, [activeTab]);
 
+  const getBackgroundClass = () => {
+    switch (activeTab) {
+      case '00':
+        return 'bg-home';
+      case '01':
+        return 'bg-destination';
+      case '02':
+        return 'bg-crew';
+      case '03':
+        return 'bg-technology';
+      default:
+        return 'bg-home';
+    }
+  };
+
   const renderContent = () => {
     switch (activeTab) {
       case '00':
@@ -36,7 +51,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className={`App ${getBackgroundClass()}`}>
       <NavBar />
       <PageContainer
         otherStyles={`page-content slide-${direction}`}
