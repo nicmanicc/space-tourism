@@ -27,8 +27,27 @@
   gap: 100px;
 }
 
+.btnDescContainer {
+  flex-basis: 40%;
+}
+
 .planetImage {
   flex-basis: 40%;
-  width: 100%;
+  width: 30rem;
   height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .descriptionContainer {
+    text-align: center;
+  }
+  .btnDescContainer {
+    flex-basis: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .btnDescContainer {
+    flex-basis: 100%;
+  }
 }
