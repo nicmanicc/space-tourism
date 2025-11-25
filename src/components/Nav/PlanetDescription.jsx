@@ -3,7 +3,9 @@ export const PlanetDescription = ({ name, desc, distance, time }) => {
   return (
     <div>
       <p className={`${classes.name} font-bellefair-preset-2`}>{name}</p>
-      <p className="font-barlow-preset-9">{desc}</p>
+      <p style={{ minHeight: '100px' }} className="font-barlow-preset-9">
+        {desc}
+      </p>
       <hr className={classes.br}></hr>
       <div className={classes.distanceContainer}>
         <p className="font-barlow-preset-7">AVG. DISTANCE</p>
