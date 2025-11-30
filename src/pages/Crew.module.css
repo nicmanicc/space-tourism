@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  height: 100%;
+  margin: 0 10%;
+  justify-content: space-between;
+}
+
+.descriptionContainer {
+  text-align: left;
+  flex-basis: 45%;
+  align-self: center;
+}
+
+.role {
+  opacity: 0.5;
+}
+
+.para {
+  min-height: 100px;
+}
+
+.title {
+  flex-basis: 100%;
+  text-align: left;
+  line-height: normal;
+}
+.imageContainer {
+  flex-basis: 45%;
+  min-height: 80%;
+  max-height: 80%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: all 1s ease;
+  max-height: 100%;
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  animation: fadeIn 0.5s ease-in forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.btn {
+  background: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.17;
+  border: 1px solid black;
+  padding: 7px;
+  border-radius: 360px;
+  margin-right: 2.5rem;
+  margin-top: 12.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.4;
+}
+.active {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .descriptionContainer {
+    text-align: center;
+  }
+  .container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+  .imageContainer {
+    justify-content: center;
+    min-height: 60%;
+    max-height: 60%;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .img {
+    width: 75%;
+  }
+}

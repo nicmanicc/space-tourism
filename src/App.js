@@ -3,6 +3,7 @@ import { NavBar } from './components/nav/NavBar';
 import { PageContainer } from './components/PageContainer';
 import { Home } from './pages/Home';
 import { Destination } from './pages/Destination';
+import { Crew } from './pages/Crew';
 import { useNavigation } from './context/NavigationContext';
 import { useState, useEffect, useRef } from 'react';
 
@@ -41,8 +42,8 @@ function App() {
         return <Home />;
       case '01':
         return <Destination />;
-      // case '02':
-      //   return <Crew />;
+      case '02':
+        return <Crew />;
       // case '03':
       //   return <Technology />;
       default:
