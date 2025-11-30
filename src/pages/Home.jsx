@@ -1,5 +1,5 @@
 import classes from './Home.module.css';
-import { useNavigation } from '../../context/NavigationContext';
+import { useNavigation } from '../context/NavigationContext';
 
 export const Home = () => {
   const { setActiveTab } = useNavigation();

@@ -1,8 +1,8 @@
 import './App.css';
 import { NavBar } from './components/nav/NavBar';
-import { PageContainer } from './components/pages/PageContainer';
-import { Home } from './components/pages/Home';
-import { Destination } from './components/pages/Destination';
+import { PageContainer } from './components/PageContainer';
+import { Home } from './pages/Home';
+import { Destination } from './pages/Destination';
 import { useNavigation } from './context/NavigationContext';
 import { useState, useEffect, useRef } from 'react';
 

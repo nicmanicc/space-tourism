@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { PlanetDescription } from '../nav/PlanetDescription';
-import europa from '../../assets/destination/image-europa.png';
-import mars from '../../assets/destination/image-mars.png';
-import moon from '../../assets/destination/image-moon.png';
-import titan from '../../assets/destination/image-titan.png';
+import { PlanetDescription } from '../components/PlanetDescription';
+import europa from '../assets/destination/image-europa.png';
+import mars from '../assets/destination/image-mars.png';
+import moon from '../assets/destination/image-moon.png';
+import titan from '../assets/destination/image-titan.png';
 import classes from './Desination.module.css';
 
 const planet_info = [
