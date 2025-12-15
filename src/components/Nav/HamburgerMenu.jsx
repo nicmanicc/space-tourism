@@ -1,9 +1,7 @@
-import { useState } from 'react';
 import classes from './HamburgerMenu.module.css';
 import { LinkContainer } from './LinkContainer';
-export const HamburgerMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
 
+export const HamburgerMenu = ({ isOpen, setIsOpen }) => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -22,6 +20,7 @@ export const HamburgerMenu = () => {
 
       <LinkContainer
         otherStyles={`${classes.menu} ${isOpen ? classes.open : ''}`}
+        onLinkClick={() => setIsOpen(false)}
       />
     </div>
   );
