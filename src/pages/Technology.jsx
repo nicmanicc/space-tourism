@@ -6,6 +6,7 @@ import capsuleLandscape from '../assets/technology/image-space-capsule-landscape
 import vehicleLandscape from '../assets/technology/image-launch-vehicle-landscape.jpg';
 import classes from './Technology.module.css';
 import { useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
 
 const technology_info = [
   {
@@ -34,9 +35,20 @@ const technology_info = [
 export const Technology = () => {
   const [currentTech, setCurrentTech] = useState('LAUNCH VEHICLE');
   const tech = technology_info.find((t) => t.name === currentTech);
-
+  const handlers = useSwipeable({
+    onSwiped: (eventData) => {
+      var previousIndex =
+        technology_info.findIndex((p) => p.name === currentTech) - 1;
+      var nextIndex =
+        technology_info.findIndex((p) => p.name === currentTech) + 1;
+      if (eventData.dir === 'Right' && nextIndex < technology_info.length)
+        setCurrentTech(technology_info[nextIndex].name);
+      if (eventData.dir === 'Left' && previousIndex > -1)
+        setCurrentTech(technology_info[previousIndex].name);
+    },
+  });
   return (
-    <div style={{ color: 'white' }}>
+    <div {...handlers} style={{ color: 'white' }}>
       <div className={classes.technologyContainer}>
         <div className={`${classes.title} font-barlow-preset-5`}>
           <span style={{ opacity: '25%' }}>03</span> SPACE LAUNCH 101

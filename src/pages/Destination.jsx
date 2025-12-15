@@ -5,6 +5,7 @@ import mars from '../assets/destination/image-mars.png';
 import moon from '../assets/destination/image-moon.png';
 import titan from '../assets/destination/image-titan.png';
 import classes from './Desination.module.css';
+import { useSwipeable } from 'react-swipeable';
 
 const planet_info = [
   {
@@ -44,9 +45,21 @@ const planet_info = [
 export const Destination = () => {
   const [currentPlanet, setCurrentPlanet] = useState('MOON');
   const planet = planet_info.find((p) => p.name === currentPlanet);
+  const handlers = useSwipeable({
+    onSwiped: (eventData) => {
+      var previousIndex =
+        planet_info.findIndex((p) => p.name === currentPlanet) - 1;
+      var nextIndex =
+        planet_info.findIndex((p) => p.name === currentPlanet) + 1;
+      if (eventData.dir === 'Right' && nextIndex < planet_info.length)
+        setCurrentPlanet(planet_info[nextIndex].name);
+      if (eventData.dir === 'Left' && previousIndex > -1)
+        setCurrentPlanet(planet_info[previousIndex].name);
+    },
+  });
 
   return (
-    <div style={{ color: 'white' }}>
+    <div {...handlers} style={{ color: 'white' }}>
       <div className={classes.destinationContainer}>
         <div className={`${classes.title} font-barlow-preset-5`}>
           <span style={{ opacity: '25%' }}>01</span> PICK YOUR DESTINATION

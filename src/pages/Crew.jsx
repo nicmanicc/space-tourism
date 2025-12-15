@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
+
 import anousheh from '../assets/crew/image-anousheh-ansari.png';
 import douglas from '../assets/crew/image-douglas-hurley.png';
 import mark from '../assets/crew/image-mark-shuttleworth.png';
@@ -36,9 +38,15 @@ const crew = [
 ];
 
 export const Crew = () => {
+  const handlers = useSwipeable({
+    onSwiped: (eventData) => {
+      if (eventData.dir === 'Right' && member < 3) setMember(member + 1);
+      if (eventData.dir === 'Left' && member > 0) setMember(member - 1);
+    },
+  });
   const [member, setMember] = useState(0);
   return (
-    <div className={classes.container}>
+    <div {...handlers} className={classes.container}>
       <div className={`${classes.title} font-barlow-preset-5`}>
         <span style={{ opacity: '25%' }}>02</span> CREW
       </div>
