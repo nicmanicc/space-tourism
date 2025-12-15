@@ -11,6 +11,7 @@ A multi-page React application showcasing space tourism destinations, crew membe
 ## Features
 
 - Responsive design for mobile, tablet, and desktop
+- Handles touch events for mobile and tablet devices
 - Smooth page transitions with slide animations
 - Dynamic background images per page
 - Interactive navigation with active states
