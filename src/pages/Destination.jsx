@@ -51,7 +51,12 @@ export const Destination = () => {
         <div className={`${classes.title} font-barlow-preset-5`}>
           <span style={{ opacity: '25%' }}>01</span> PICK YOUR DESTINATION
         </div>
-        <img src={planet.image} className={classes.planetImage} alt="Planet" />
+        <img
+          key={planet.name}
+          src={planet.image}
+          className={classes.planetImage}
+          alt="Planet"
+        />
         <div className={classes.btnDescContainer}>
           <div className={classes.descriptionContainer}>
             {planet_info.map((planet) => {
